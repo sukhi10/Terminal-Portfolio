@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Terminal</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="background">
+      <div id="terminal-container">
+        <div id="terminal-header">
+          <div class="terminal-buttons">
+            <span class="close-btn"></span>
+            <span class="minimize-btn"></span>
+            <span class="maximize-btn"></span>
+          </div>
+          <div class="terminal-title">terminal.sukhi - Sukhman Shergill</div>
+          <div class="terminal-title">
+            Type one of the following: help / about / resume / projects / clear
+            / goals / download
+          </div>
+        </div>
+        <div id="terminal">
+          <div id="output"></div>
+          <div id="input-line">
+            <span class="prompt">user$ </span>
+            <input
+              type="text"
+              id="command-input"
+              autocomplete="off"
+              autofocus
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

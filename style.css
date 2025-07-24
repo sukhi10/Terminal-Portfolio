@@ -1,0 +1,133 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #000;
+    color: #00ff00;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Terminal Background Glow */
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 255, 0, 0.2) 0%, rgba(0, 0, 0, 1) 70%);
+    animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        background: radial-gradient(circle, rgba(0, 255, 0, 0.2) 0%, rgba(0, 0, 0, 1) 70%);
+    }
+    100% {
+        background: radial-gradient(circle, rgba(0, 255, 0, 0.4) 0%, rgba(0, 0, 0, 1) 80%);
+    }
+}
+
+/* Terminal Container */
+#terminal-container {
+    background-color: #1e1e1e;
+    width: 750px;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 255, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Terminal Header */
+#terminal-header {
+    background: #333;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    color: #00ff00;
+    font-size: 14px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Terminal */
+#terminal {
+    flex: 1;
+    background: #000;
+    color: #00ff00;
+    overflow-y: auto;
+    border-radius: 0 0 10px 10px;
+    font-size: 16px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align content left */
+    justify-content: flex-start;
+}
+
+/* Output */
+#output {
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: left;
+    width: 100%;
+}
+
+/* Input Line */
+#input-line {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.prompt {
+    color: #00ff00;
+    margin-right: 5px;
+}
+
+#command-input {
+    flex: 1;
+    background: none;
+    border: none;
+    color: #00ff00;
+    outline: none;
+    font-family: inherit;
+    font-size: 14px;
+    caret-color: #00ff00;
+    text-align: left;
+    width: 100%;
+    padding: 0;
+}
+
+/* Simulate a wider terminal block cursor */
+#command-input::selection {
+    background: #00ff00;
+    color: #000;
+}
+
+#command-input::placeholder {
+    color: rgba(0, 255, 0, 0.5);
+}
+
+/* Optional: Simulate blinking cursor (on fake element) if desired */
+
+/* Command links */
+.command-option {
+    color: #00ff00;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.command-option:hover,
+.command-link:hover {
+    text-decoration: none;
+    color: #00ff88;
+}
+
+.command-link {
+    color: #00ff00;
+    text-decoration: underline;
+}
