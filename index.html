@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sukhman Shergill | Terminal Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="background"></div>
+
+    <main class="page-shell">
+      <section id="terminal-container">
+        <div id="terminal-header">
+          <div class="terminal-topbar">
+            <div class="terminal-buttons" aria-hidden="true">
+              <span class="close-btn"></span>
+              <span class="minimize-btn"></span>
+              <span class="maximize-btn"></span>
+            </div>
+            <div class="terminal-heading">
+              <div class="terminal-title">terminal.sukhi</div>
+              <div class="terminal-subtitle">
+                Sukhman Shergill · Interactive Portfolio
+              </div>
+            </div>
+          </div>
+
+          <div class="terminal-command-bar">
+            <span class="bar-label">quick commands</span>
+            <div class="header-command-list">
+              <button type="button" class="header-chip" data-command="help">
+                help
+              </button>
+              <button type="button" class="header-chip" data-command="about">
+                about
+              </button>
+              <button type="button" class="header-chip" data-command="resume">
+                resume
+              </button>
+              <button type="button" class="header-chip" data-command="projects">
+                projects
+              </button>
+              <button type="button" class="header-chip" data-command="goals">
+                goals
+              </button>
+              <button type="button" class="header-chip" data-command="download">
+                download
+              </button>
+              <button type="button" class="header-chip" data-command="linkedin">
+                linkedin
+              </button>
+              <button type="button" class="header-chip" data-command="clear">
+                clear
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div id="terminal">
+          <div id="output"></div>
+
+          <div id="input-line">
+            <span class="prompt">user$</span>
+            <input
+              type="text"
+              id="command-input"
+              autocomplete="off"
+              autofocus
+              spellcheck="false"
+              placeholder='type "help" and press enter'
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
